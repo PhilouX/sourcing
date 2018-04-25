@@ -10,17 +10,17 @@ firebase.initializeApp({
 //fetch the object startup and prepare instanciation
 var Startup = require("./startup.js");
 
-//add a startup en creant un id manuellement
-
-var id = 32005
-var object = new Startup("Fabio Kuhn", "United Kingdom", 2016, "Provider of an analytics platform designed to focus on the oil markets. The company uses artificial intelligence to analyse and interpret data on a massive scale and absorbs billions of data points from hundreds of sources to show past present and future flows of oil worldwide enabling traders to outperform the competition with actionable real-time market intelligence.",
-    "Vortexa", "", 1985, ["Business/Productivity Software", "Media and Information Services (B2B)", "Other EnergyArtificial Intelligence & Machine Learning"],
-    "fabio.kuhn@vortexa.com", "?", "vortexa.com");
-
-function addStartup(id, object){
+//add a startup document
+function addStartup(id, object) {
     var startupDetail = firebase.database().ref("/" + id);
     startupDetail.set({ object });
 }
+
+//simulate adding a mock document
+var id = 32005
+var object = new Startup("Superman", "United Kingdom", 2016, "Provider of an analytics platform designed to focus on the oil markets. The company uses artificial intelligence to analyse and interpret data on a massive scale and absorbs billions of data points from hundreds of sources to show past present and future flows of oil worldwide enabling traders to outperform the competition with actionable real-time market intelligence.",
+    "International one", "", 1985, ["Business/Productivity Software", "Media and Information Services (B2B)", "Other EnergyArtificial Intelligence & Machine Learning"],
+    "p@v.com", "?", "google.com");
 
 addStartup(id, object);
 
@@ -38,17 +38,17 @@ descriptifRef.on('value', function (snapshot) {
 
 //update startup details by id
 var updateDetails = firebase.database().ref()
-        .child('/'+ startupId + '/').set({contact : "Fabio Kuhn",
+        .child('/'+ startupId + '/').set({contact : "blabl",
             country : "United Kingdom",
             creation_date : 2016,
             descriptif : "Provider of an analytics platform designed to focus on the oil markets. The company uses artificial intelligence to analyse and interpret data on a massive scale and absorbs billions of data points from hundreds of sources to show past present and future flows of oil worldwide enabling traders to outperform the competition with actionable real-time market intelligence.",
-            entreprise : "Vortexa",
+            entreprise : "company",
             funds : "",
             id : 1985,
             keywords : ["Business/Productivity Software", "Media and Information Services (B2B)", "Other EnergyArtificial Intelligence & Machine Learning"],
-            mail : "fabio.kuhn@vortexa.com",
+            mail : "mail",
             target : "?",
-            url : "vortexa.com"});
+            url : "url"});
 
 //update contactname by id
 var updateContact = firebase.database().ref()
