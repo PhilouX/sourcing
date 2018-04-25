@@ -10,8 +10,26 @@ var database = firebase.database();
 //fetch the object startup and prepare instanciation
 var startup = require("./startup.js");
 
-const essai = new startup.constructor('jean', 'USA', '2009', 'blablabla', 'company', 2, 32090, 'AI', 'mail@mail.com', true, 'www.google.com');
-console.log(essai)
+//add a startup
+var startupDetail = firebase.database().ref("/");
+startupDetail.set({
+    32000: {
+        contact: "Fabio Kuhn",
+        country: "United Kingdom",
+        creation_date: 2016,
+        descriptif: "Provider of an analytics platform designed to focus on the oil markets. The company uses artificial intelligence to analyse and interpret data on a massive scale and absorbs billions of data points from hundreds of sources to show past present and future flows of oil worldwide enabling traders to outperform the competition with actionable real-time market intelligence.",
+        entreprise: "Vortexa",
+        funds: "",
+        id: 1985,
+        keywords: ["Business/Productivity Software", "Media and Information Services (B2B)", "Other EnergyArtificial Intelligence & Machine Learning"],
+        mail: "fabio.kuhn@vortexa.com",
+        target: "?",
+        url: "vortexa.com"
+    }
+});
+
+//const essai = new startup.constructor('jean', 'USA', '2009', 'blablabla', 'company', 2, 32090, 'AI', 'mail@mail.com', true, 'www.google.com');
+//console.log(essai)
 /*
 function addStartup(contact, country, creation_date, descriptif, entreprise, funds, id, keywords, mail, target, url) {
     var newStartup = essai;
