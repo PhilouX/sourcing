@@ -14,6 +14,7 @@ class Startup {
 
     }
 }
+module.exports = Startup;
 /*
 const test = new Startup("Paul", "France", "2009", "blablabla", "Company", 5, 9, "AI", "p.ef@d.com", false, "www.google.com")
 
