@@ -1,0 +1,22 @@
+<h2>{{startup.entreprise}}</h2>
+<div>
+  <span>url: </span>{{startup.url}}</div>
+<div>
+  <span>counrty: {{startup.country}} </span></div> 
+
+<table style="width:100%">
+  <tr>
+    <th>keywords</th>
+    <th>descriptif</th>
+  </tr>
+  <tr>
+    <td>{{startup.keywords}}</td>
+    <td>{{startup.descriptif}}</td> 
+  </tr>
+</table>
+<br>
+<div>
+  <label>keywords:
+    <input [(ngModel)]="startup.keywords" placeholder="keywords" size= 50px>
+  </label>
+</div>
