@@ -11,9 +11,11 @@ var database = firebase.database();
 var startup = require("./startup.js");
 
 //add a startup
-var startupDetail = firebase.database().ref("/");
+
+var id = 32001
+
+var startupDetail = firebase.database().ref("/" + id );
 startupDetail.set({
-    32000: {
         contact: "Fabio Kuhn",
         country: "United Kingdom",
         creation_date: 2016,
@@ -26,7 +28,7 @@ startupDetail.set({
         target: "?",
         url: "vortexa.com"
     }
-});
+);
 
 //const essai = new startup.constructor('jean', 'USA', '2009', 'blablabla', 'company', 2, 32090, 'AI', 'mail@mail.com', true, 'www.google.com');
 //console.log(essai)
@@ -38,7 +40,7 @@ function addStartup(contact, country, creation_date, descriptif, entreprise, fun
 
 /*
 //get a startup descriptif by id
-var startupId = 1985;
+var startupId = 32000;
 var descriptifRef = firebase.database().ref('/' + startupId + '/');
 descriptifRef.on('value', function (snapshot) {
     console.log(snapshot.val());
