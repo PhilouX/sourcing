@@ -1,1 +1,11 @@
-<h1>Startup n° <%=startup%> detail</h1>
+<p>
+    <b>Contact :</b>
+     <%=startup%>
+</p>
+
+<form action="/startup/add/" method="post">
+    <label for="startup">company: </label>
+    <input id="company" type="text" name="name_field" value="company name :">
+    <input type="submit" value="OK">
+</form>
+
