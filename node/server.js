@@ -1,6 +1,11 @@
 var express = require('express');
-var database = require("./database");
 var app = express();
+
+var database = require("./database");
+
+//Test sans vue
+//var test = database.getStartup(10);
+//console.log(test);
 
 app.get('/startup/:id', function (req, res) {
     var startup = database.getStartup(req.params.id);
