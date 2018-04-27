@@ -1,11 +1,167 @@
-<p>
-    <b>Contact :</b>
-     <%=startup%>
-</p>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>sourcing startups</title>
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+<!--
+            <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+            <script>
+                // Initialize Firebase
+                var config = {
+                apiKey: "AIzaSyAVgSFJ6RKDN8CfoMjrfz3Q3vz7xTmbegs",
+                authDomain: "sourcing-stratups.firebaseapp.com",
+                databaseURL: "https://sourcing-stratups.firebaseio.com",
+                projectId: "sourcing-stratups",
+                storageBucket: "sourcing-stratups.appspot.com",
+                messagingSenderId: "1034458885429"
+              };
+              firebase.initializeApp(config);
+            </script>
+-->
+    </head>
 
-<form action="/startup/add/" method="post">
-    <label for="startup">company: </label>
-    <input id="company" type="text" name="name_field" value="company name :">
+    <body>
+        <h3>Startup n°<%=startupProfile.id%> details</h3>
+            <div id="startupDetailsContainer">
+                <div class="startupDetail">
+                    <p>
+                        <b>Entreprise :</b>
+                        <%=startupProfile.entreprise%>
+                    </p>
+                    <form method='POST'>
+                        <p>Update entreprise : <input name='entreprise'></p>
+                        <button type='submit'>Update now.</button>
+                    </form>
+                </div>
+                <div class="startupDetail">
+                    <p>
+                        <b>Keywords :</b>
+                        <%=startupProfile.keywords%>
+                    </p>
+                    <form method='POST'>
+                        <p>Update keywords :
+                            <input name='keywords'>
+                        </p>
+                        <button type='submit'>Update now.</button>
+                    </form>
+                </div>
+                <div class="startupDetail">
+                    <p>
+                        <b>descriptif :</b>
+                        <%=startupProfile.descriptif%>
+                    </p>
+                    <form method='POST'>
+                        <p>Update descriptif :
+                            <input name='descriptif'>
+                        </p>
+                        <button type='submit'>Update now.</button>
+                    </form>
+                </div>
+                <div class="startupDetail">
+                    <p>
+                        <b>country :</b>
+                        <%=startupProfile.country%>
+                    </p>
+                    <form method='POST'>
+                        <p>Update country :
+                            <input name='country'>
+                        </p>
+                        <button type='submit'>Update now.</button>
+                    </form>
+                </div>
+                <div class="startupDetail">
+                    <p>
+                        <b>funds :</b>
+                        <%=startupProfile.funds%>
+                    </p>
+                    <form method='POST'>
+                        <p>Update funds :
+                            <input name='funds'>
+                        </p>
+                        <button type='submit'>Update now.</button>
+                    </form>
+                </div>
+                <div class="startupDetail">
+                    <p>
+                        <b>url :</b>
+                        <%=startupProfile.url%>
+                    </p>
+                    <form method='POST'>
+                        <p>Update url :
+                            <input name='url'>
+                        </p>
+                        <button type='submit'>Update now.</button>
+                    </form>
+                </div>
+                <div class="startupDetail">
+                    <p>
+                        <b>target :</b>
+                        <%=startupProfile.target%>
+                    </p>
+                    <form method='POST'>
+                        <p>Update target :
+                            <input name='descriptif'>
+                        </p>
+                        <button type='submit'>Update now.</button>
+                    </form>
+                </div>
+                <div class="startupDetail">
+                    <p>
+                        <b>contact :</b>
+                        <%=startupProfile.contact%>
+                    </p>
+                    <form method='POST'>
+                        <p>Update contact :
+                            <input name='contact'>
+                        </p>
+                        <button type='submit'>Update now.</button>
+                    </form>
+                </div>
+                <div class="startupDetail">
+                    <p>
+                        <b>mail :</b>
+                        <%=startupProfile.mail%>
+                    </p>
+                    <form method='POST'>
+                        <p>Update descriptif :
+                            <input name='mail'>
+                        </p>
+                        <button type='submit'>Update now.</button>
+                    </form>
+                </div>
+                <div class="startupDetail">
+                    <p>
+                        <b>creation date :</b>
+                        <%=startupProfile.creation_date%>
+                    </p>
+                    <form method='POST'>
+                        <p>Update descriptif :
+                            <input name='creation_date'>
+                        </p>
+                        <button type='submit'>Update now.</button>
+                    </form>
+                </div>
+            </div>
+
+    </body>
+</html>
+<!--
+<form action="/startup/add/" enctype='application/json' method="post">
+    company details:<br>
+    <label for="id">id</label>
+    <input type="number" name="id" value="id"><br>
+    <label for="startup">startup details :</label>
+    <input type="text" name="company" value="company name :"><br>
+    <input type="text" name="country" value="country"><br>
+    <input type="text" name="keywords" value="keywords 1">
+    <input type="text" name="keywords" value="keywords 2">
+    <input type="text" name="keywords" value="keywords 3"><br>
+    <input type="text" name="descriptif" value="descriptif"><br>
+    <input type="text" name="creation_date" value="creation_date"><br>
+    <input type="number" name="funds" value="funds"><br>
+    <input type="text" name="contact" value="contact"><br>
+    <input type="text" name="email" value="email"><br>
+    <input type="checkbox" name="target" checked><br>
     <input type="submit" value="OK">
 </form>
-
+-->

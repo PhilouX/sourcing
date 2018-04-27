@@ -1,0 +1,19 @@
+
+#startupDetailsContainer {
+    display : flex;
+    flex-wrap: wrap;
+    color:rgb(0, 0, 0);
+}
+
+.startupDetail{
+    background-color: rgb(99, 176, 240);
+    padding: 4px;
+    border-width:2px;
+    border-style:outset;
+    border-color:#DC143C;
+}
+
+b {
+    color: #DC143C;
+
+}
