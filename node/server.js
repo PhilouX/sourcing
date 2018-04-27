@@ -1,21 +1,53 @@
 var express = require('express');
+var bodyParser = require('body-parser');
+//var database = require("./database");
+var logger = require('morgan')
+var firebase = require("firebase-admin");
+//Instanciantion de l'acces à la base
+var serviceAccount = require("firebase-admin/serviceAccountKey.json");
+var firebase = firebase.initializeApp({
+    credential: firebase.credential.cert(serviceAccount),
+    databaseURL: "https://sourcing-stratups.firebaseio.com"
+});
+
+
 var app = express();
 
-var database = require("./database");
+app.set('view engine', 'ejs');
 
-//Test sans vue
-//var test = database.getStartup(10, "contact");
-//console.log(test);
+//to storage file if needed.
+app.use(express.static('views'));
+app.set('/views', __dirname +'/views');
 
+//Give the server access to the user input
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
+
+// for the logs
+app.use(logger('dev'));    
 
 app.get('/startup/:id', function (req, res) {
+    var startupDetail = firebase.database().ref("/" + req.params.id);
+    startupDetail.on('value', function (snapshot) {
+        var startupProfile = snapshot.val();
+        //console.log(startupProfile.contact);
+        res.render('home.ejs', {
+            id: req.params.id, startupProfile: startupProfile}); 
+    })
+    /*
     var startup = database.getStartup(req.params.id);
     res.render('home.ejs', { id: req.params.id, startup: startup });
-    //console.log(startup);
-}).get('/startup/add/', function(req, res) {
-    var startup = database.addStartup(id, object);
-    res.render('home.ejs');
-})
+    console.log(startup);
+    */
+})/*
+.post('/startup/add/', function(req, res) {
+    //var entreprise = req.body.entreprise;
+    //res.render('startup.ejs', {data: entreprise});
+    var entreprise = req.body.entreprise;
+    var startup = database.addStartup(001, entreprise);
+    //res.render('home.ejs', {data : });
+    
+})*/
    .use(function (req, res, next) {
     res.setHeader('Content-Type', 'text/plain');
     res.status(404).send('startup introuvable !');
