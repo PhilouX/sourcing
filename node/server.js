@@ -34,11 +34,6 @@ app.get('/startup/:id', function (req, res) {
         res.render('home.ejs', {
             id: req.params.id, startupProfile: startupProfile}); 
     })
-    /*
-    var startup = database.getStartup(req.params.id);
-    res.render('home.ejs', { id: req.params.id, startup: startup });
-    console.log(startup);
-    */
 })/*
 .post('/startup/add/', function(req, res) {
     //var entreprise = req.body.entreprise;
@@ -47,7 +42,22 @@ app.get('/startup/:id', function (req, res) {
     var startup = database.addStartup(001, entreprise);
     //res.render('home.ejs', {data : });
     
-})*/
+})
+    addStartup: function addStartup(id, object) {
+        var startupNew = firebase.database().ref("/" + id);
+        startupNew.set({ object });
+    },
+
+    //update startup details by id
+var updateDetails = firebase.database().ref()
+        .child('/'+ startupId + '/').set({object});
+
+//update contactname by id
+var updateContact = firebase.database().ref()
+    .child('/' + startupId + '/').update({
+        "/contact": "bioman",
+    });
+*/
    .use(function (req, res, next) {
     res.setHeader('Content-Type', 'text/plain');
     res.status(404).send('startup introuvable !');
