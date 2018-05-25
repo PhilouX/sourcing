@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>add startup form</title>
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+    <!--
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAVgSFJ6RKDN8CfoMjrfz3Q3vz7xTmbegs",
+            authDomain: "sourcing-stratups.firebaseapp.com",
+            databaseURL: "https://sourcing-stratups.firebaseio.com",
+            projectId: "sourcing-stratups",
+            storageBucket: "sourcing-stratups.appspot.com",
+            messagingSenderId: "1034458885429"
+        };
+        firebase.initializeApp(config);
+    </script>
+     -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    
+
+</head>
+
+<body>
+    </div>
+    <form role="form" method="post">
+        <div class="form-group">
+            <label for="entreprise"> Entreprise:</label>
+            <input type="text" class="form-control" name="entreprise" id="entreprise" required maxlength="50">
+        </div>
+        <div class="form-group">
+            <label for="url"> url:</label>
+            <input type="text" class="form-control" name="url" id="url" required maxlength="50">
+        </div>
+        <div class="form-group">
+            <label for="keywords"> Keywords:</label>
+            <input type="text" class="form-control" name="keywords" id="keywords" required maxlength="50">
+        </div>
+        <div class="form-group">
+            <label for="descriptif"> Descriptif:</label>
+            <textarea class="form-control" type="textarea" name="descriptif" id="descriptif" placeholder="descriptif..." maxlength="6000" rows="7"></textarea>
+        </div>
+        <button type="submit" class="btn btn-lg btn-success pull-right"> Add the startup now.</button>
+    </form>
+  
+</body>
+
+
+</html>

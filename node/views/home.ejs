@@ -3,25 +3,12 @@
     <head>
         <title>sourcing startups</title>
         <link rel="stylesheet" type="text/css" href="/css/style.css">
-<!--
-            <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
-            <script>
-                // Initialize Firebase
-                var config = {
-                apiKey: "AIzaSyAVgSFJ6RKDN8CfoMjrfz3Q3vz7xTmbegs",
-                authDomain: "sourcing-stratups.firebaseapp.com",
-                databaseURL: "https://sourcing-stratups.firebaseio.com",
-                projectId: "sourcing-stratups",
-                storageBucket: "sourcing-stratups.appspot.com",
-                messagingSenderId: "1034458885429"
-              };
-              firebase.initializeApp(config);
-            </script>
--->
+        <script src="/js/addStartup.js"></script>
     </head>
 
     <body>
-        <h3>Startup n°<%=startupProfile.id%> details</h3>
+
+        <h3>Startup details : <%=startupProfile.entreprise%></h3>
             <div id="startupDetailsContainer">
                 <div class="startupDetail">
                     <p>
@@ -29,19 +16,21 @@
                         <%=startupProfile.entreprise%>
                     </p>
                     <form method='POST'>
-                        <p>Update entreprise : <input name='entreprise'></p>
+                        <small>Update entreprise : <input name='entreprise' /></small>
                         <button type='submit'>Update now.</button>
                     </form>
+                    
                 </div>
+                <br>
                 <div class="startupDetail">
                     <p>
                         <b>Keywords :</b>
                         <%=startupProfile.keywords%>
                     </p>
                     <form method='POST'>
-                        <p>Update keywords :
+                        <smallp>Update keywords :
                             <input name='keywords'>
-                        </p>
+                        </small>
                         <button type='submit'>Update now.</button>
                     </form>
                 </div>
@@ -51,9 +40,9 @@
                         <%=startupProfile.descriptif%>
                     </p>
                     <form method='POST'>
-                        <p>Update descriptif :
+                        <small>Update descriptif :
                             <input name='descriptif'>
-                        </p>
+                        </small>
                         <button type='submit'>Update now.</button>
                     </form>
                 </div>
@@ -63,9 +52,9 @@
                         <%=startupProfile.country%>
                     </p>
                     <form method='POST'>
-                        <p>Update country :
+                        <small>Update country :
                             <input name='country'>
-                        </p>
+                        </small>
                         <button type='submit'>Update now.</button>
                     </form>
                 </div>
@@ -75,9 +64,9 @@
                         <%=startupProfile.funds%>
                     </p>
                     <form method='POST'>
-                        <p>Update funds :
+                        <small>Update funds :
                             <input name='funds'>
-                        </p>
+                        </small>
                         <button type='submit'>Update now.</button>
                     </form>
                 </div>
@@ -87,9 +76,9 @@
                         <%=startupProfile.url%>
                     </p>
                     <form method='POST'>
-                        <p>Update url :
+                        <small>Update url :
                             <input name='url'>
-                        </p>
+                        </small>
                         <button type='submit'>Update now.</button>
                     </form>
                 </div>
@@ -99,9 +88,9 @@
                         <%=startupProfile.target%>
                     </p>
                     <form method='POST'>
-                        <p>Update target :
+                        <small>Update target :
                             <input name='descriptif'>
-                        </p>
+                        </small>
                         <button type='submit'>Update now.</button>
                     </form>
                 </div>
@@ -111,9 +100,9 @@
                         <%=startupProfile.contact%>
                     </p>
                     <form method='POST'>
-                        <p>Update contact :
+                        <small>Update contact :
                             <input name='contact'>
-                        </p>
+                        </small>
                         <button type='submit'>Update now.</button>
                     </form>
                 </div>
@@ -123,9 +112,9 @@
                         <%=startupProfile.mail%>
                     </p>
                     <form method='POST'>
-                        <p>Update descriptif :
+                        <small>Update descriptif :
                             <input name='mail'>
-                        </p>
+                        </small>
                         <button type='submit'>Update now.</button>
                     </form>
                 </div>
@@ -135,9 +124,9 @@
                         <%=startupProfile.creation_date%>
                     </p>
                     <form method='POST'>
-                        <p>Update descriptif :
+                        <small>Update descriptif :
                             <input name='creation_date'>
-                        </p>
+                        </small>
                         <button type='submit'>Update now.</button>
                     </form>
                 </div>

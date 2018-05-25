@@ -1,16 +1,25 @@
 
 #startupDetailsContainer {
     display : flex;
-    flex-wrap: wrap;
+    justify-content: space-evenly;
     color:rgb(0, 0, 0);
 }
 
 .startupDetail{
-    background-color: rgb(99, 176, 240);
+    background-color: rgb(255, 255, 255);
+    font-family: Arial;
     padding: 4px;
+    border-radius:7px;
     border-width:2px;
     border-style:outset;
-    border-color:#DC143C;
+    border-color:rgb(0, 0, 0);
+}
+
+.detail{
+    display : flex;
+    flex-wrap: nowrap;
+    font-family: Courier New;
+
 }
 
 b {
