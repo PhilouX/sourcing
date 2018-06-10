@@ -3,7 +3,6 @@
     <head>
         <title>sourcing startups</title>
         <link rel="stylesheet" type="text/css" href="/css/style.css">
-        <script src="/js/addStartup.js"></script>
     </head>
 
     <body>
@@ -60,18 +59,6 @@
                 </div>
                 <div class="startupDetail">
                     <p>
-                        <b>funds :</b>
-                        <%=startupProfile.funds%>
-                    </p>
-                    <form method='POST'>
-                        <small>Update funds :
-                            <input name='funds'>
-                        </small>
-                        <button type='submit'>Update now.</button>
-                    </form>
-                </div>
-                <div class="startupDetail">
-                    <p>
                         <b>url :</b>
                         <%=startupProfile.url%>
                     </p>
@@ -82,75 +69,7 @@
                         <button type='submit'>Update now.</button>
                     </form>
                 </div>
-                <div class="startupDetail">
-                    <p>
-                        <b>target :</b>
-                        <%=startupProfile.target%>
-                    </p>
-                    <form method='POST'>
-                        <small>Update target :
-                            <input name='descriptif'>
-                        </small>
-                        <button type='submit'>Update now.</button>
-                    </form>
-                </div>
-                <div class="startupDetail">
-                    <p>
-                        <b>contact :</b>
-                        <%=startupProfile.contact%>
-                    </p>
-                    <form method='POST'>
-                        <small>Update contact :
-                            <input name='contact'>
-                        </small>
-                        <button type='submit'>Update now.</button>
-                    </form>
-                </div>
-                <div class="startupDetail">
-                    <p>
-                        <b>mail :</b>
-                        <%=startupProfile.mail%>
-                    </p>
-                    <form method='POST'>
-                        <small>Update descriptif :
-                            <input name='mail'>
-                        </small>
-                        <button type='submit'>Update now.</button>
-                    </form>
-                </div>
-                <div class="startupDetail">
-                    <p>
-                        <b>creation date :</b>
-                        <%=startupProfile.creation_date%>
-                    </p>
-                    <form method='POST'>
-                        <small>Update descriptif :
-                            <input name='creation_date'>
-                        </small>
-                        <button type='submit'>Update now.</button>
-                    </form>
-                </div>
             </div>
 
     </body>
 </html>
-<!--
-<form action="/startup/add/" enctype='application/json' method="post">
-    company details:<br>
-    <label for="id">id</label>
-    <input type="number" name="id" value="id"><br>
-    <label for="startup">startup details :</label>
-    <input type="text" name="company" value="company name :"><br>
-    <input type="text" name="country" value="country"><br>
-    <input type="text" name="keywords" value="keywords 1">
-    <input type="text" name="keywords" value="keywords 2">
-    <input type="text" name="keywords" value="keywords 3"><br>
-    <input type="text" name="descriptif" value="descriptif"><br>
-    <input type="text" name="creation_date" value="creation_date"><br>
-    <input type="number" name="funds" value="funds"><br>
-    <input type="text" name="contact" value="contact"><br>
-    <input type="text" name="email" value="email"><br>
-    <input type="checkbox" name="target" checked><br>
-    <input type="submit" value="OK">
-</form>
--->

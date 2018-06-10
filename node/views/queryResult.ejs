@@ -35,7 +35,7 @@
             // Initialize lunrjs using our generated index file
             function initLunr() {
                 // First retrieve the index file
-                $.getJSON("./data/aichallenge.json")
+                $.getJSON("./data/dataInput.json")
                     .done(function (index) {
                         pagesIndex = index;
                         console.log("index:", pagesIndex);
@@ -97,11 +97,11 @@
                 }
 
                 // Only show the ten first results
-                results.slice(0, 100).forEach(function (result) {
+                results.slice(0, 10).forEach(function (result) {
                     var $result = $("<li>");
                     $result.append($("<a>", {
                         href: result.entreprise,
-                        text: "» " + result.entreprise
+                        text: "» " + result.entreprise + ": " + result.descriptif
                     }));
                     $results.append($result);
                 });
