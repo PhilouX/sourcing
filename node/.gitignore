@@ -49,4 +49,12 @@ Thumbs.db
 
 /node_modules
 
+/data
+
+package-lock.json
+
+
+
+/metastore_db
+
 

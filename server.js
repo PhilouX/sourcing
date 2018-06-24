@@ -28,7 +28,7 @@ app.use(logger('dev'));
 
 //ne fonctionne pas, besoin de connaitre le path avec le bon id
 app.get('/startup/:entreprise', function (req, res) {
-    var startupDetail = firebase.database().ref("/entreprises" + req.params.entreprise);
+    var startupDetail = firebase.database().ref("/entreprises" + "/"+ req.params.entreprise);
     startupDetail.once('value', function (snapshot) {
         var startupProfile = snapshot.val();
         //console.log(startupProfile.contact);

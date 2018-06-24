@@ -1,15 +1,9 @@
 class Startup {
-    constructor(contact, country, creation_date, descriptif, entreprise, funds, id, keywords, mail, target, url) {
-        this.contact = contact;
+    constructor(entreprise, country, descriptif, keywords, url) {
         this.country = country;
-        this.creation_date = creation_date;
         this.descriptif = descriptif;
         this.entreprise = entreprise;
-        this.funds = funds;
-        this.id = id;
         this.keywords = keywords;
-        this.mail = mail;
-        this.target = target;
         this.url = url;
 
     }

@@ -7,16 +7,22 @@ var firebase = firebase.initializeApp({
     databaseURL: "https://sourcing-stratups.firebaseio.com"
 });
 
-var data = fs.readFileSync('../data/aichallenge.json', 'utf8');
+var data = fs.readFileSync('../data/dataInput.json', 'utf8');
 var entreprise = JSON.parse(data);
 var entrepriseRef = firebase.database().ref("/entreprises");
 
+
 var i;
 for (i=0; i<entreprise.length; i++) {
-    //keywords=[]
-    //keywords.append(words[i].contact)
-    entrepriseRef.push({ entreprise: entreprise[i].entreprise, url: entreprise[i].url, keywords: [entreprise[i].keywords], descriptif: entreprise[i].descriptif});
+        entrepriseRef.child(i).set({ 
+        entreprise: entreprise[i].entreprise, 
+        url: entreprise[i].url, 
+        keywords: entreprise[i].keywords, 
+        descriptif: entreprise[i].descriptif,
+        context: entreprise[i].context
+    });
 }
+
 
 
 //var entrepriseRef = firebase.database().ref("/entreprises");
@@ -24,4 +30,4 @@ for (i=0; i<entreprise.length; i++) {
 
 
 
-//entrepriseRef.push('zzzrrrTTT');
+//firebase-import --database_url https://sourcing-stratups.firebaseio.com --path /entreprises --json ./views/data/sourcing-entreprise_vivatech.json --merge
